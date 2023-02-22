@@ -19,6 +19,7 @@ func initRouter(r *gin.Engine) {
 
 	apiRouter := r.Group("/douyin")
 
+	// todo :authBody
 	// basic apis
 	apiRouter.GET("/feed/", Video.VideoFeedHandler)
 	apiRouter.GET("/user/", middleware.JWTMiddleWare(), User.UserInfoHandler)
